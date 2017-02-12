@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require 'get_images'
 
-# TODO: Add code here
+puts GetImages.uris_list(ARGV[0])
