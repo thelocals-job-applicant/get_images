@@ -1,4 +1,12 @@
 #!/usr/bin/env ruby
 require 'get_images'
+require 'uri'
 
-# TODO: Add code here
+uri = ARGV[0]
+if uri.nil?
+  puts 'Usage: get_images URI'
+elsif not uri =~ URI.regexp
+  puts "Invalid URI. Maybe you forgot the scheme and slashes (e.g. 'https://')."
+else
+  puts GetImages.uris_list(uri)
+end
