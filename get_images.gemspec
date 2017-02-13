@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.author        = 'thelocals_job_applicant'
   spec.email         = 'thelocals_job_applicant@protonmail.com'
+  spec.homepage      = 'https://github.com/thelocals-job-applicant/get_images'
   spec.summary       = 'List URIs of images on some page given as an argument.'
 
   spec.files         = `git ls-files -z`.split("\0").reject { |f| f =~ /^spec\// }
@@ -19,6 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.11'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'httparty', '~> 0.14'
-  spec.add_development_dependency 'nokogiri', '~> 1.7.0'
+
+  spec.add_runtime_dependency 'httparty', '~> 0.14'
+  spec.add_runtime_dependency 'nokogiri', '~> 1.7.0'
 end
